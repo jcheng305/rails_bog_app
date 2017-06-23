@@ -118,7 +118,9 @@ $  curl https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materializ
 ```
 You should see that that file is now in your project's directory.
 
-To include the CSS from the library file you just downloaded into your pages, require it in `app/assets/stylesheets/application.css`:
+To include the CSS from the library file you just downloaded into your pages, require it in `app/assets/stylesheets/application.css`.
+
+Find the line where it says `*= require_tree .`, and add a new line above it as follows:
 
 ```css
 /*
