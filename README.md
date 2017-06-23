@@ -33,7 +33,8 @@ When you're finished with your timed runs, edit the README to add an introductio
 
  - a 3-5 sentences reflection on how this went for you  
  - a tip for others to help conquer some part of the app that used to trip you up  
- - the times for your first and fourth runs     
+ - the times for your first and fourth runs
+ - Please record your best time in this [anonymous form](https://docs.google.com/a/generalassemb.ly/forms/d/e/1FAIpQLSdKPBITk0wMo2M3YhwMGB1kDnAZYz9GymXZ1ocHWZLNGQ9XnA/viewform) (And take a look at the responses!)
 
 
 ## Background
