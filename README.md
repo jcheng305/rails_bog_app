@@ -17,17 +17,19 @@ It's time to put all your Rails knowledge into practice! In this project, you wi
 
 You'll work through this project as a "time trial." You will be building the app 4 times, each time gaining skills through repetition. Here's how we want you to work:
 
-  1. Start by making a `first-run` branch: `git checkout -b first-run`. Move through the instructions below to build your bog app. Use as many hints as you'd like to check your work and make sure you get through the lab smoothly. Commit your work along the way and at the conclusion. If you get stuck at any point, feel free to reference the [solution branch](../../tree/solution).
-  2. Reset your progress to the beginning by checking out master again `git checkout master` then make a `second-run` branch: `git checkout -b second-run`. Go through the lab another time. This time, time yourself on how long it takes you. Push yourself to peek at the hints more sparingly and code as much as you can on your own. Try not reference the solutions branch; you can look at your own first branch if you're stuck.  Again, make sure to commit your work. Note: you will need to drop your database on each new run during this lab, since the old DB will already exist on your machine! Run `rake db:drop db:create db:migrate` to do so, or restart the project from scratch.
-  3. Reset your progress to the beginning by checking out master again `git checkout master` then make a `third-run` branch: `git checkout -b third-run`. Repeat the lab a third time. Try not to use the instructions to build your bog app and refer to them only when very stuck. Time yourself again and aim to build the app faster than you built it the second time around. Make sure you have roughly the same number of commits as you had on your second run. Version control isn't the place to cut corners!
-  4. Reset your progress to the beginning by checking out master again `git checkout master` then make a `fourth-run` branch: `git checkout -b fourth-run`. Time yourself. This is the fourth time; streamline your process. Squash bugs faster and try not to look at the resources. Commit often and build it as fast as you can!
+  1. Start by making folder that will hold each of your trial apps.
+  1. Move through the instructions below to build your bog app. Use as many hints as you'd like to check your work and make sure you get through the lab smoothly. Commit your work along the way and at the conclusion. If you get stuck at any point, feel free to reference the [solution branch](../../tree/solution). Take notes on your workflow.
+  1. When you've finished a run, go back to the containing folder and make a new rails app. Make sure you name it differently (e.g. `bog-app-one`, `bog-app-two`)! Watch out that you're not in a nested rails app folder!
+  1. Go through the lab another time. This time, time yourself on how long it takes you. Push yourself to peek at the hints more sparingly and code as much as you can on your own. Try not reference the solution; you can look at your first rails app if you're stuck.  Again, make sure to commit your work.
+  1. Repeat the lab a third time. Try not to use the instructions to build your bog app and refer to them only when very stuck. Time yourself again and aim to build the app faster than you built it the second time around. Make sure you have roughly the same number of commits as you had on your second run. Version control isn't the place to cut corners!
+  1. Repeat the lab a fourth time. Time yourself. Try to streamline your process. Squash bugs faster and try not to look at any resources. Commit often and build it as fast as you can!
 
 
 <img src="https://camo.githubusercontent.com/d758d1c1a85e7829d11df73ea25820533db881e7/687474703a2f2f692e67697068792e636f6d2f545467647a75545766784d566439716a4262712e676966" width="40%">
 
 ### Submission
 
-When you're finished with your timed runs, edit the README on your master branch with an introduction paragraph that includes:
+When you're finished with your timed runs, edit the README to add an introduction paragraph that includes:
 
  - a 3-5 sentences reflection on how this went for you  
  - a tip for others to help conquer some part of the app that used to trip you up  
@@ -64,18 +66,40 @@ REST stands for **REpresentational State Transfer**. We will strictly adhere to 
 
 ![](https://camo.githubusercontent.com/58b675eee577ccb1f4b57b14e58761b3fa56a3b8/687474703a2f2f692e67697068792e636f6d2f313149334f7346524c6b514951552e676966)
 
-#### 1. Set up a new Rails project
-
-Fork this repo, and clone it onto your local machine. Change directories into `rails-bog-app`, and create a new Rails project:
+#### 0. Create a folder that will (eventually) contain four rails apps
+Only do this step the first time:
 
 ```bash
-$  rails new bog_app -T -d postgresql
-$  cd bog_app
+mkdir bog-app-time-trials
+cd bog-app-time-trials
+```
+
+#### 1. Set up a new Rails project
+(Write down your start time!!!)
+
+Create a new Rails project:
+
+```bash
+$  rails new bog_app_three -T -d postgresql
+$  cd bog_app_three
 $  rails db:create
 $  rails s
 ```
 
+Create your development database:
+```bash
+$  rails db:create
+```
+
+> Watch Out! *If you're not careful, you may already have an existing/old database called bog_app_one or bog_app_two!*
+
+Run your local server:
+```bash
+$  rails s
+```
 Your app should be up and running at `localhost:3000`.
+
+> Watch Out! *You may already have a server running on localhost:3000!*
 
 #### 2. Add Bootstrap or Materialize to your project
 
@@ -217,6 +241,8 @@ Run the migration to update the database with this change:
 ```bash
 $  rails db:migrate
 ```
+
+> Watch Out! *If you're not careful, you may already have an existing/old database called bog_app_one or bog_app_two, and it may already contain a table called `creatures`!*
 
 #### 6. Create a creature
 
@@ -1134,6 +1160,8 @@ Add a delete button to the view that displays a single creature:
 Visit `localhost:3000/creatures/1` in the browser, and inspect the HTML for the delete button. Click the delete button to manually test this feature.
 
 At this point, you've created all the RESTful routes, implemented controller actions for each route, and made views for `index`, `show`, `new`, and `edit`. You've also created the `Creature` model in the database and manually tested that everything works.
+
+(Write down your stop time!!! How long did this run take?)
 
 ## Additional Development Ideas for after Version 4
 
