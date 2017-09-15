@@ -108,7 +108,9 @@ Rails handles CSS and JavaScript with a system called the asset pipeline. We'll 
 
 Third-party libraries belong in the `vendor/assets` sub-directory of your Rails app. You'll need to download a your library's CSS or SCSS file and add it to this directory.
 
-For Bootstrap, a simple way to do this is with the [bootstrap-sass](https://github.com/twbs/bootstrap-sass) gem. Click link to their github repo and follow the instructions for Ruby on Rails.
+For Bootstrap, a simple way to do this is with the [bootstrap-sass](https://github.com/twbs/bootstrap-sass) gem. Click link to their github repo and follow the instructions for Ruby on Rails. Make sure however that you also install the jquery gem by adding ``` gem 'jquery-rails' ``` to your gemfile and then running ``` bundle install ```.
+
+
 
 
 <!-- One way you can do that is to use the Terminal. You can use `curl` to make HTTP requests, like `GET`ing the file from a CDN.  Then, you can use the `>` command to save the result of `curl` to a new file inside the `vendor/assets/stylesheets` sub-directory. The entire Terminal bash command will have this format: `curl INSERT YOUR CDN LINK HERE  > vendor/assets/stylesheets/YOUR NEW FILE NAME`.
